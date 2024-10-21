@@ -2,14 +2,12 @@
   Localizable.strings
   xunliao
 
-  Created by  mac on 2024/9/23.
+  Created by  mac on 2024/10/21.
   
 */
-
 microChat = "微聊";
 positioning = "定位";
 health = "健康";
 mine = "我的";
 
 stepNumber = "步数";
-
