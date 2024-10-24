@@ -11,6 +11,7 @@ import URLImage
 struct MemberView: View {
     let stepNumber:String = NSLocalizedString("stepNumber", comment: "step number")
     let mine:String = NSLocalizedString("mine", comment: "mine")
+    @State private var showingActionSheet = false
     
     var body: some View {
         NavigationView {
@@ -131,6 +132,19 @@ struct MemberView: View {
             }
             .background(Color.gray.opacity(0.1))
             .navigationBarTitle(Text(mine), displayMode: .inline)
+            .navigationBarItems(trailing: HStack{
+                NavigationLink(destination: WatchNews()){
+                    Image(systemName: "text.bubble")
+                }
+                .padding()
+                .foregroundColor(.black)
+                .navigationTitle("手表消息")
+                
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
+                    Image(systemName: "plus")
+                }
+                .foregroundColor(.black)
+            })
         }
     }
 }
